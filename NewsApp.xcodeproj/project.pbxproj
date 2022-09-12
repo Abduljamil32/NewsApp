@@ -11,6 +11,10 @@
 		1106F8AA28CDAC7600B0F605 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106F8A928CDAC7600B0F605 /* ContentView.swift */; };
 		1106F8AC28CDAC7800B0F605 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1106F8AB28CDAC7800B0F605 /* Assets.xcassets */; };
 		1106F8AF28CDAC7800B0F605 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1106F8AE28CDAC7800B0F605 /* Preview Assets.xcassets */; };
+		1106F8B828CDACCF00B0F605 /* GetData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106F8B728CDACCF00B0F605 /* GetData.swift */; };
+		1106F8BA28CDACE100B0F605 /* DataType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1106F8B928CDACE100B0F605 /* DataType.swift */; };
+		1106F8BD28CDAD1200B0F605 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 1106F8BC28CDAD1200B0F605 /* SDWebImageSwiftUI */; };
+		1106F8C028CDAD2400B0F605 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 1106F8BF28CDAD2400B0F605 /* SwiftyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,8 @@
 		1106F8A928CDAC7600B0F605 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1106F8AB28CDAC7800B0F605 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1106F8AE28CDAC7800B0F605 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1106F8B728CDACCF00B0F605 /* GetData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetData.swift; sourceTree = "<group>"; };
+		1106F8B928CDACE100B0F605 /* DataType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +32,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1106F8C028CDAD2400B0F605 /* SwiftyJSON in Frameworks */,
+				1106F8BD28CDAD1200B0F605 /* SDWebImageSwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +59,8 @@
 		1106F8A628CDAC7600B0F605 /* NewsApp */ = {
 			isa = PBXGroup;
 			children = (
+				1106F8B628CDACB800B0F605 /* network */,
+				1106F8B528CDACB300B0F605 /* model */,
 				1106F8A728CDAC7600B0F605 /* NewsAppApp.swift */,
 				1106F8A928CDAC7600B0F605 /* ContentView.swift */,
 				1106F8AB28CDAC7800B0F605 /* Assets.xcassets */,
@@ -65,6 +75,22 @@
 				1106F8AE28CDAC7800B0F605 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1106F8B528CDACB300B0F605 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1106F8B928CDACE100B0F605 /* DataType.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		1106F8B628CDACB800B0F605 /* network */ = {
+			isa = PBXGroup;
+			children = (
+				1106F8B728CDACCF00B0F605 /* GetData.swift */,
+			);
+			path = network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +109,10 @@
 			dependencies = (
 			);
 			name = NewsApp;
+			packageProductDependencies = (
+				1106F8BC28CDAD1200B0F605 /* SDWebImageSwiftUI */,
+				1106F8BF28CDAD2400B0F605 /* SwiftyJSON */,
+			);
 			productName = NewsApp;
 			productReference = 1106F8A428CDAC7600B0F605 /* NewsApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +141,10 @@
 				Base,
 			);
 			mainGroup = 1106F89B28CDAC7600B0F605;
+			packageReferences = (
+				1106F8BB28CDAD1200B0F605 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				1106F8BE28CDAD2400B0F605 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 1106F8A528CDAC7600B0F605 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +172,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1106F8AA28CDAC7600B0F605 /* ContentView.swift in Sources */,
+				1106F8BA28CDACE100B0F605 /* DataType.swift in Sources */,
 				1106F8A828CDAC7600B0F605 /* NewsAppApp.swift in Sources */,
+				1106F8B828CDACCF00B0F605 /* GetData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +375,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1106F8BB28CDAD1200B0F605 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		1106F8BE28CDAD2400B0F605 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1106F8BC28CDAD1200B0F605 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1106F8BB28CDAD1200B0F605 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		1106F8BF28CDAD2400B0F605 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1106F8BE28CDAD2400B0F605 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1106F89C28CDAC7600B0F605 /* Project object */;
 }
